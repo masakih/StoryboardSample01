@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +642,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -667,15 +668,140 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a4e-pb-3QK">
+                                <rect key="frame" x="18" y="119" width="110" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="0zv-Bg-eb8"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Left Side" id="GIU-2L-VEW">
+                                    <font key="font" metaFont="system" size="27"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="sWI-wL-mqY">
+                                <rect key="frame" x="143" y="0.0" width="337" height="270"/>
+                                <connections>
+                                    <segue destination="JVT-P5-Wez" kind="embed" id="PNC-Ua-FuG"/>
+                                </connections>
+                            </containerView>
+                            <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="4jt-fr-I4K">
+                                <rect key="frame" x="132" y="12" width="5" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="Xc8-AT-jtB"/>
+                                </constraints>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="a4e-pb-3QK" secondAttribute="bottom" constant="119" id="12u-1H-b2v"/>
+                            <constraint firstItem="a4e-pb-3QK" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="118" id="FlC-ux-a4i"/>
+                            <constraint firstAttribute="bottom" secondItem="sWI-wL-mqY" secondAttribute="bottom" id="Gce-fr-Fon"/>
+                            <constraint firstItem="sWI-wL-mqY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="QEf-D2-O6W"/>
+                            <constraint firstItem="sWI-wL-mqY" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="143" id="RvK-9j-gpR"/>
+                            <constraint firstItem="4jt-fr-I4K" firstAttribute="leading" secondItem="a4e-pb-3QK" secondAttribute="trailing" constant="8" id="SfR-kX-4Ah"/>
+                            <constraint firstAttribute="bottom" secondItem="4jt-fr-I4K" secondAttribute="bottom" constant="12" id="Ww4-qs-Wj9"/>
+                            <constraint firstAttribute="trailing" secondItem="sWI-wL-mqY" secondAttribute="trailing" id="Wwe-QD-KkR"/>
+                            <constraint firstItem="a4e-pb-3QK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="qxp-pc-ml7"/>
+                            <constraint firstItem="4jt-fr-I4K" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="19" id="yUK-jt-yWK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7XW-hf-Rw7">
+            <objects>
+                <viewController id="JVT-P5-Wez" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" id="TmN-gp-iJn">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="osm-8g-RQX">
+                                <rect key="frame" x="165" y="247" width="121" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="pU4-Mj-EJK"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="First View" id="QY3-e2-yEM">
+                                    <font key="font" metaFont="system" size="27"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0xB-Y4-Alw">
+                                <rect key="frame" x="185" y="133" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qLy-R9-O0B">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="dNJ-vO-2Tt" kind="custom" identifier="" customClass="SlideSegue" id="A5T-wd-ubG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0xB-Y4-Alw" firstAttribute="centerY" secondItem="TmN-gp-iJn" secondAttribute="centerY" id="2ZV-tm-R2l"/>
+                            <constraint firstItem="osm-8g-RQX" firstAttribute="leading" secondItem="TmN-gp-iJn" secondAttribute="leading" constant="167" id="BuP-QU-uq3"/>
+                            <constraint firstItem="osm-8g-RQX" firstAttribute="top" secondItem="TmN-gp-iJn" secondAttribute="top" constant="20" id="hvw-wO-OLj"/>
+                            <constraint firstAttribute="trailing" secondItem="osm-8g-RQX" secondAttribute="trailing" constant="166" id="kQE-81-XMY"/>
+                            <constraint firstItem="0xB-Y4-Alw" firstAttribute="centerX" secondItem="TmN-gp-iJn" secondAttribute="centerX" id="ogd-EU-ghW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="cif-BZ-Kda" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="586"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hRK-1f-NAk">
+            <objects>
+                <viewController id="dNJ-vO-2Tt" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" id="hns-hz-IzA">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UCu-W6-7LC">
+                                <rect key="frame" x="185" y="133" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="95h-P8-A7L">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="JVT-P5-Wez" kind="custom" identifier="" customClass="SlideSegue" id="RkA-ab-fWc"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GZt-Kx-uca">
+                                <rect key="frame" x="145" y="247" width="161" height="33"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Second View" id="kq4-aN-h6t">
+                                    <font key="font" metaFont="system" size="27"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="UCu-W6-7LC" firstAttribute="centerX" secondItem="hns-hz-IzA" secondAttribute="centerX" id="T4x-J9-2ai"/>
+                            <constraint firstItem="GZt-Kx-uca" firstAttribute="centerX" secondItem="UCu-W6-7LC" secondAttribute="centerX" id="TZ9-aa-wxY"/>
+                            <constraint firstItem="UCu-W6-7LC" firstAttribute="centerY" secondItem="hns-hz-IzA" secondAttribute="centerY" id="ZlY-Ge-2gS"/>
+                            <constraint firstItem="GZt-Kx-uca" firstAttribute="top" secondItem="hns-hz-IzA" secondAttribute="top" constant="20" symbolic="YES" id="cAx-tW-g0k"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="OqM-nB-Bn3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570" y="1101"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RkA-ab-fWc"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,7 @@
 		F4E742E01CAC048300CF54FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E742DF1CAC048300CF54FA /* ViewController.m */; };
 		F4E742E21CAC048300CF54FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E742E11CAC048300CF54FA /* Assets.xcassets */; };
 		F4E742E51CAC048300CF54FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E742E31CAC048300CF54FA /* Main.storyboard */; };
+		F4E742F11CAD39F000CF54FA /* SlideSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E742F01CAD39F000CF54FA /* SlideSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		F4E742E11CAC048300CF54FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4E742E41CAC048300CF54FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4E742E61CAC048300CF54FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4E742EF1CAD39F000CF54FA /* SlideSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideSegue.h; sourceTree = "<group>"; };
+		F4E742F01CAD39F000CF54FA /* SlideSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 				F4E742D91CAC048300CF54FA /* AppDelegate.m */,
 				F4E742DE1CAC048300CF54FA /* ViewController.h */,
 				F4E742DF1CAC048300CF54FA /* ViewController.m */,
+				F4E742EF1CAD39F000CF54FA /* SlideSegue.h */,
+				F4E742F01CAD39F000CF54FA /* SlideSegue.m */,
 				F4E742E11CAC048300CF54FA /* Assets.xcassets */,
 				F4E742E31CAC048300CF54FA /* Main.storyboard */,
 				F4E742E61CAC048300CF54FA /* Info.plist */,
@@ -146,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E742E01CAC048300CF54FA /* ViewController.m in Sources */,
+				F4E742F11CAD39F000CF54FA /* SlideSegue.m in Sources */,
 				F4E742DD1CAC048300CF54FA /* main.m in Sources */,
 				F4E742DA1CAC048300CF54FA /* AppDelegate.m in Sources */,
 			);
@@ -287,6 +293,7 @@
 				F4E742EB1CAC048300CF54FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

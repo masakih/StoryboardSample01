@@ -10,16 +10,11 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-	[super viewDidLoad];
 
-	// Do any additional setup after loading the view.
-}
-
-- (void)setRepresentedObject:(id)representedObject {
-	[super setRepresentedObject:representedObject];
-
-	// Update the view, if already loaded.
+- (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(nullable id)sender
+{
+	NSViewController *d = segue.destinationController;
+	d.representedObject = self.representedObject;
 }
 
 @end
