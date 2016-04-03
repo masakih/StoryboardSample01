@@ -13,6 +13,11 @@
 
 - (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(nullable id)sender
 {
+	// アニメーション開始後に動作させない
+	if([sender respondsToSelector:@selector(setAction:)]) {
+		[sender setAction:nil];
+	}
+	
 	NSViewController *d = segue.destinationController;
 	d.representedObject = self.representedObject;
 }

@@ -8,8 +8,6 @@
 
 #import "SlideSegue.h"
 
-#import <Quartz/Quartz.h>
-
 @implementation SlideSegue
 - (void)perform
 {
@@ -20,19 +18,18 @@
 		[p addChildViewController:d];
 	}
 	
-	NSRect frame = s.view.frame;
-	frame.origin.x = frame.size.width;
-	d.view.frame = frame;
-	[s.view.superview addSubview:d.view];
-	
-	NSRect newDFrame = s.view.frame;
-	
-	NSRect newSFrame = s.view.frame;
-	newSFrame.origin.x = -newSFrame.size.width;
-	
 	[NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
-		context.duration = 1;
-		context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+		context.duration = 0.5;
+		
+		NSRect frame = s.view.frame;
+		frame.origin.x = frame.size.width;
+		d.view.frame = frame;
+		[s.view.superview addSubview:d.view];
+		
+		NSRect newDFrame = s.view.frame;
+		
+		NSRect newSFrame = s.view.frame;
+		newSFrame.origin.x = -newSFrame.size.width;
 		
 		s.view.animator.frame = newSFrame;
 		d.view.animator.frame = newDFrame;

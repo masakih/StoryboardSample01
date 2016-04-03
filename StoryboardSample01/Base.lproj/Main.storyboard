@@ -668,22 +668,11 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a4e-pb-3QK">
-                                <rect key="frame" x="18" y="119" width="110" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="106" id="0zv-Bg-eb8"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Left Side" id="GIU-2L-VEW">
-                                    <font key="font" metaFont="system" size="27"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="sWI-wL-mqY">
                                 <rect key="frame" x="143" y="0.0" width="337" height="270"/>
                                 <connections>
@@ -699,17 +688,24 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a4e-pb-3QK">
+                                <rect key="frame" x="18" y="218" width="110" height="33"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Left Side" id="GIU-2L-VEW">
+                                    <font key="font" metaFont="system" size="27"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="a4e-pb-3QK" secondAttribute="bottom" constant="119" id="12u-1H-b2v"/>
-                            <constraint firstItem="a4e-pb-3QK" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="118" id="FlC-ux-a4i"/>
+                            <constraint firstItem="a4e-pb-3QK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Du9-Nv-Rfz"/>
                             <constraint firstAttribute="bottom" secondItem="sWI-wL-mqY" secondAttribute="bottom" id="Gce-fr-Fon"/>
+                            <constraint firstItem="a4e-pb-3QK" firstAttribute="top" secondItem="4jt-fr-I4K" secondAttribute="top" id="I6V-Gi-oSj"/>
                             <constraint firstItem="sWI-wL-mqY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="QEf-D2-O6W"/>
                             <constraint firstItem="sWI-wL-mqY" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="143" id="RvK-9j-gpR"/>
-                            <constraint firstItem="4jt-fr-I4K" firstAttribute="leading" secondItem="a4e-pb-3QK" secondAttribute="trailing" constant="8" id="SfR-kX-4Ah"/>
                             <constraint firstAttribute="bottom" secondItem="4jt-fr-I4K" secondAttribute="bottom" constant="12" id="Ww4-qs-Wj9"/>
                             <constraint firstAttribute="trailing" secondItem="sWI-wL-mqY" secondAttribute="trailing" id="Wwe-QD-KkR"/>
-                            <constraint firstItem="a4e-pb-3QK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="qxp-pc-ml7"/>
+                            <constraint firstItem="4jt-fr-I4K" firstAttribute="leading" secondItem="a4e-pb-3QK" secondAttribute="trailing" constant="8" symbolic="YES" id="lWY-KZ-UtO"/>
                             <constraint firstItem="4jt-fr-I4K" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="19" id="yUK-jt-yWK"/>
                         </constraints>
                     </view>
@@ -721,7 +717,7 @@
         <!--View Controller-->
         <scene sceneID="7XW-hf-Rw7">
             <objects>
-                <viewController id="JVT-P5-Wez" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="JVT-P5-Wez" sceneMemberID="viewController">
                     <view key="view" id="TmN-gp-iJn">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -764,7 +760,7 @@
         <!--View Controller-->
         <scene sceneID="hRK-1f-NAk">
             <objects>
-                <viewController id="dNJ-vO-2Tt" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="dNJ-vO-2Tt" sceneMemberID="viewController">
                     <view key="view" id="hns-hz-IzA">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
